@@ -14,7 +14,7 @@ function App() {
 
   return (
       <div className="App">
-        <MovieList movies={movies}></MovieList>
+        <MovieList movies={movies} isClicked={false}></MovieList>
       </div>
   );
 }
