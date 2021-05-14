@@ -1,11 +1,21 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import MovieList from './components/MovieList'
+import axios from 'axios';
 
 function App() {
 
+  const [movies, setMovies] = useState("");
+
+  useEffect(() => {
+    axios.get('/api/v1/movies.json')
+        .then(res => setMovies(res.data))
+        // .then(() => console.log(movies[0]))
+      }, []);
+
   return (
       <div className="App">
-        <h1>Hello World</h1>
+        <MovieList movies={movies}></MovieList>
       </div>
   );
 }
