@@ -1,7 +1,11 @@
 ul.noBullets {
   list-style-type: none;
 }
-noPadding {
-  padding: 0;
-  margin-top: 0;
+
+img {
+  width: 20%;
+  height: 20%;
+  text-align: center;
+  /* border: 3px solid red; */
+  object-fit: cover;
 }

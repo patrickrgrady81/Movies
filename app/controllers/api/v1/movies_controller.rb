@@ -17,9 +17,9 @@ class Api::V1::MoviesController < ApplicationController
       r["id"]
     end
     #print the ids
-    titles.each do |t|
-      puts "#{t}"
-    end
+    # titles.each do |t|
+    #   puts "#{t}"
+    # end
 
     #get movie info for each movie
     q1 = "3/movie/"
@@ -28,11 +28,15 @@ class Api::V1::MoviesController < ApplicationController
       HTTParty.get("#{base_uri}#{q1}#{t}#{q2}#{key}#{extras}")
     end
 
-    pp responses
+    #get movie posters
+    # posters = {name: "Mortal Kombat", poster_id: 1}
+    # data = {responses: responses, posters: posters}
+
+    check = responses[0]["poster_path"]
 
     # pp response["results"][0]["description"]
     render json: responses
-    # render json: titles
+    # render json: check
 
   end
 end
