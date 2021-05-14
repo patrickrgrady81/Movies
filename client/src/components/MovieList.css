@@ -24,3 +24,7 @@ img {
   flex: 0 1 auto;
   align-self: auto;
 }
+
+.lower {
+  margin-top: 100px;
+}

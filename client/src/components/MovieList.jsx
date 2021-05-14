@@ -23,7 +23,7 @@ const MovieList = props => {
 
   if (props.movies){
     return(
-      <>
+      <div className="lower">
         <button onClick={handleButtonLeft}>&#60;  PREV </button>
         <ul className="noBullets flex-container" >
           {props.movies.map((movie, index) => {
@@ -35,7 +35,7 @@ const MovieList = props => {
           )}})}
         </ul>
         <button onClick={handleButtonRight}> NEXT  &#62; </button>
-     </>
+     </div>
     )
     
   } else {
