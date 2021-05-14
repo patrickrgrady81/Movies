@@ -10,7 +10,6 @@ function App() {
   useEffect(() => {
     axios.get('/api/v1/movies.json')
         .then(res => setMovies(res.data))
-        // .then(() => console.log(movies[0]))
       }, []);
 
   return (
